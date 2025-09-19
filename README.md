@@ -90,6 +90,20 @@ Press ***CTRL+O*** to save and exit.
 
 You should `reboot` your system now.
 
+#### rEFInd
+
+Open `/boot/refind_linux.conf` `$ sudo nano /boot/refind_linux.conf`
+
+Find the line `"Boot with standard options" "..."`
+
+Add `... iommu=pt`
+
+If using Intel also add `... intel_iommu=on`
+
+Press ***CTRL+O*** to save and exit.
+
+You should `reboot` your system now.
+
 ### Check & Prepare your OS
 
 Check for IOMMU support `$ sudo dmesg | grep IOMMU`
